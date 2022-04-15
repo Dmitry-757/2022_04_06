@@ -24,22 +24,22 @@ public class Main {
         System.out.println("our fraction 2 is: " + fr2.toString());
         System.out.println();
 
-        System.out.println(""+fr1.toString()+" + "+fr2.toString());
+        System.out.println("" + fr1.toString() + " + " + fr2.toString());
         fr1.add(fr2);
         System.out.println("rezult is: " + fr1.toString());
         System.out.println();
 
-        System.out.println(""+fr1.toString()+" - "+fr2.toString());
+        System.out.println("" + fr1.toString() + " - " + fr2.toString());
         fr1.sub(fr2);
         System.out.println("rezult is: " + fr1.toString());
         System.out.println();
 
-        System.out.println(""+fr1.toString()+" * "+fr2.toString());
+        System.out.println("" + fr1.toString() + " * " + fr2.toString());
         fr1.mult(fr2);
         System.out.println("rezult is: " + fr1.toString());
         System.out.println();
 
-        System.out.println(""+fr1.toString()+" / "+fr2.toString());
+        System.out.println("" + fr1.toString() + " / " + fr2.toString());
         fr1.division(fr2);
         System.out.println("rezult is: " + fr1.toString());
         System.out.println();

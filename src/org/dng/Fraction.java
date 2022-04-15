@@ -6,10 +6,11 @@ public class Fraction {
     private int numerator;
     private int denominator;
 
-    public Fraction()  {}
+    public Fraction() {
+    }
 
     public Fraction(int numerator, int denominator) throws Exception {
-        if ( denominator == 0){
+        if (denominator == 0) {
             throw new Exception("Denominator must be not zero!");
         }
         this.numerator = numerator;
@@ -29,7 +30,7 @@ public class Fraction {
     }
 
     public void setDenominator(int denominator) throws Exception {
-        if ( denominator == 0){
+        if (denominator == 0) {
             throw new Exception("Denominator must be not zero!");
         }
         this.denominator = denominator;
@@ -38,12 +39,12 @@ public class Fraction {
 
     @Override
     public String toString() {
-        if(numerator > denominator){
-            return (""+numerator/denominator+
-                    (numerator%denominator == 0 ? "" :
-                    "("+numerator%denominator+"\\"+denominator+")"));
+        if (numerator > denominator) {
+            return ("" + numerator / denominator +
+                    (numerator % denominator == 0 ? "" :
+                            "(" + numerator % denominator + "\\" + denominator + ")"));
         }
-        return "" + numerator+"\\"+
+        return "" + numerator + "\\" +
                 denominator;
     }
 
@@ -58,10 +59,9 @@ public class Fraction {
         System.out.println("Enter denominator");
         if (sc.hasNextInt()) {
             int denom = sc.nextInt();
-            if ( denom == 0){
+            if (denom == 0) {
                 throw new Exception("Denominator must be not zero!");
-            }
-            else {
+            } else {
                 denominator = denom;
             }
 
@@ -75,10 +75,10 @@ public class Fraction {
 
 
     public void add(Fraction fr) {
-        numerator = (numerator*fr.denominator + fr.numerator*denominator);
-        denominator = (denominator*fr.denominator);
-        for (int i = numerator; i > 1 ; i--) {
-            if((numerator%i == 0 )&&(denominator%i == 0)){
+        numerator = (numerator * fr.denominator + fr.numerator * denominator);
+        denominator = (denominator * fr.denominator);
+        for (int i = numerator; i > 1; i--) {
+            if ((numerator % i == 0) && (denominator % i == 0)) {
                 numerator /= i;
                 denominator /= i;
                 break;
@@ -87,10 +87,10 @@ public class Fraction {
     }
 
     public void sub(Fraction fr) {
-        numerator = (numerator*fr.denominator - fr.numerator*denominator);
-        denominator = (denominator*fr.denominator);
-        for (int i = numerator; i > 1 ; i--) {
-            if((numerator%i == 0 )&&(denominator%i == 0)){
+        numerator = (numerator * fr.denominator - fr.numerator * denominator);
+        denominator = (denominator * fr.denominator);
+        for (int i = numerator; i > 1; i--) {
+            if ((numerator % i == 0) && (denominator % i == 0)) {
                 numerator /= i;
                 denominator /= i;
                 break;
@@ -102,8 +102,8 @@ public class Fraction {
     public void mult(Fraction fr) {
         numerator = numerator * fr.numerator;
         denominator = denominator * fr.denominator;
-        for (int i = numerator; i > 1 ; i--) {
-            if((numerator%i == 0 )&&(denominator%i == 0)){
+        for (int i = numerator; i > 1; i--) {
+            if ((numerator % i == 0) && (denominator % i == 0)) {
                 numerator /= i;
                 denominator /= i;
                 break;
@@ -114,13 +114,13 @@ public class Fraction {
     public void division(Fraction fr) {
         numerator = numerator * fr.denominator;
         denominator = denominator * fr.numerator;
-        for (int i = numerator; i > 1 ; i--) {
-            if((numerator%i == 0 )&&(denominator%i == 0)){
+        for (int i = numerator; i > 1; i--) {
+            if ((numerator % i == 0) && (denominator % i == 0)) {
                 numerator /= i;
                 denominator /= i;
                 break;
             }
         }
     }
-    
+
 }
